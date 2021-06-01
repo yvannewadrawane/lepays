@@ -1,0 +1,41 @@
+/*
+Theme Name:Le_pays
+Theme URI:https://lepayslw.io
+Author:Yvanne WADRAWANE
+Author URI:https://dysign.fr
+Description:Mon premier thème !
+Requires at least:WordPress 5.0
+Version:1.0 */
+
+.header
+{
+    width: 100% !important;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.img_header {
+    display: block;
+    margin: auto;
+    height: 309px;
+    width: fit-content;
+    
+}
+h1 {
+    font-family: "Pattaya", 'Times New Roman', Times, serif ;
+    color: red;
+}
+
+.menu{
+    margin-top: 10px;
+   }
+   .menu li{
+       color: white;
+    display: inline;
+    padding: 10px 10px 0 10px;
+   }
+   .menu li a:hover{
+    text-decoration: none;
+    color: rgb(255, 0, 13);
+    border-bottom: solid 2px black;
+   }
