@@ -10,6 +10,7 @@
 </head>
 
 <body <?php body_class();?>>
+<body class="home blog logged-in admin-bar no-customize-support">
 
 <?php
   wp_body_open();

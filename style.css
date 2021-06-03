@@ -7,17 +7,25 @@ Description:Mon premier thème !
 Requires at least:WordPress 5.0
 Version:1.0 */
 
+.menu {
+    position: fixed;
+    top: 0px;
+}
+
+.admin-bar .menu {
+	top: 32px; 
+}
 .header
 {
     width: 100% !important;
-    background-color: white;
+    background-color :black;
     margin-right: 10px;
 }
 
 .img_header {
     display: block;
     margin: auto;
-    height: 309px;
+    height: 100px;
     width: fit-content;
     
 }
@@ -39,3 +47,38 @@ h1 {
     color: rgb(255, 0, 13);
     border-bottom: solid 2px black;
    }
+
+
+.footer{
+    background-color: black;
+}
+
+.p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    
+}
+
+h1{
+color:black;
+font-weight:bold;
+font-style: oblique;
+size: 10em;
+}
+
+.attachment-post-thumbnail{
+
+   border: 5px solid darkblue;
+   height: 150px;
+   width: 200px;
+   margin-left: 25%;
+   
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
