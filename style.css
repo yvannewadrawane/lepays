@@ -3,10 +3,13 @@ Theme Name:Le_pays
 Theme URI:https://lepayslw.io
 Author:Yvanne WADRAWANE
 Author URI:https://dysign.fr
-Description:Mon premier thème !
+Description:Mon premier thème yolo!
 Requires at least:WordPress 5.0
 Version:1.0 */
 
+.body{
+    background-color: brown;
+}
 .menu {
     position: fixed;
     top: 0px;
@@ -18,14 +21,14 @@ Version:1.0 */
 .header
 {
     width: 100% !important;
-    background-color :black;
+   /* background-color :black;*/
     margin-right: 10px;
 }
 
 .img_header {
     display: block;
     margin: auto;
-    height: 100px;
+    height: 70px;
     width: fit-content;
     
 }
@@ -36,6 +39,11 @@ h1 {
 
 .menu{
     margin-top: 10px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
    }
    .menu li{
        color: white;
@@ -49,7 +57,7 @@ h1 {
    }
 
 
-.footer{
+   .footer{
     background-color: black;
 }
 
@@ -81,4 +89,39 @@ p {
     text-align: center;
     font-size: medium;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.post_article{
+    text-align: center;
+}
+
+
+.container{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px;
+    width: 1265px;
+    font-weight: bold;
+    font-size:medium ;
+}
+.conteneur{
+    text-align: center;
+    font-size: small;
+}
+.footer{
+    background-color: brown;
+}
+
+h4{
+    font-size: medium;
+}
+.item_sidebar {
+    float: left;
+    margin: 0 0 0 -300px;
+    width: 300px;
+    justify-self: start;
+    
 }

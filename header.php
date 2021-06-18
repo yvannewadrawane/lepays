@@ -11,6 +11,10 @@
 
 <body <?php body_class();?>>
 <body class="home blog logged-in admin-bar no-customize-support">
+  
+<a href="<?php echo home_url( '/' ); ?>">
+      <img class="img_header" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
+      </a>
 
 <?php
   wp_body_open();
@@ -20,11 +24,15 @@
 
       <?php 
     wp_nav_menu ( array (
-    'theme_location' => 'menu' ,
-    'menu_class' => 'menu', 
+    'theme_location' => 'main',
+    'container' => "ul",
+    //'menu_class' => 'menu', 
     ) ); ?>
 
-      <a href="<?php echo home_url( '/' ); ?>">
-      <img class="img_header" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
-      </a>
-    </header>
+
+
+      <div class="container">
+        <p>LePays </p>
+      </div>
+
+  </header>

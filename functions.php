@@ -7,6 +7,7 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
 
 
+
 function add_theme_scripts() {
    
     wp_enqueue_style( 'style', get_stylesheet_uri("style.css") );
@@ -21,10 +22,21 @@ function add_theme_scripts() {
     
   //ajouter une nouvelle zone de menu à mon thème
 
-  function register_my_menu() {
+ /* function register_my_menu() {
   register_nav_menu('header-menu',__( 'menu' ));
   }
-  add_action( 'init', 'register_my_menu' );
+  add_action( 'init', 'register_my_menu' );*/
+
+  register_nav_menus(
+    array(
+        'main'      => 'menu',
+        'footer'    => 'Bas de page',
+));
+register_sidebar( array(
+	'id' => 'blog-sidebar',
+	'name' => 'Blog',
+) );
+
 
   function wpb_init_widgets_custom($id) {
     register_sidebar( array(
@@ -37,3 +49,20 @@ function add_theme_scripts() {
     ) );
 }
 add_action('widgets_init','wpb_init_widgets_custom');
+
+function new_excerpt_more($more) {
+  global $post;
+  return '... <a href="' . get_permalink() . '" class="more-link" title="Read More">Read More</a>';
+}
+add_filter('excerpt_more','new_excerpt_more');
+function my_excerpt_length($length) {
+  return 15;
+}
+add_filter('excerpt_length', 'my_excerpt_length', 999);
+function trim_custom_excerpt($excerpt) {
+  if (has_excerpt()) {
+      $excerpt = wp_trim_words(get_the_excerpt(), apply_filters("excerpt_length", 15));
+  }
+  return $excerpt;
+}
+add_filter("the_excerpt", "trim_custom_excerpt", 999);
